@@ -1,32 +1,23 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <TopNavBar>
+      <img src="./assets/logo.png" slot="Icon" class="h-full object-contain"/>
+    </TopNavBar>
+
     <router-view/>
+    <!-- <router-view class="view one"></router-view> -->
+    <!-- <router-view class="view two" name="a"></router-view>
+    <router-view class="view three" name="b"></router-view> -->
   </div>
 </template>
+<script lang="ts">
+import TopNavBar from './components/TopNavbar.vue'
+export default {
+  components: { TopNavBar }
 
+}
+</script>
+
+<style lang="css" src="./styles.css"/>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
